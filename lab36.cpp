@@ -20,6 +20,7 @@ int main() {
     IntBinaryTree tree;
     populate(tree);
     string code;
+    string newCode;
     int choice;
 
     //tree.displayInOrder();
@@ -39,10 +40,33 @@ int main() {
 
         case 2:
         cout << "Enter a code to insert" << endl;
+        cin >> code;
         tree.insertNode(code);
 
         case 3:
-        cout << ""
+        cout << "Enter a code to delete" << endl;
+        cin >> code;
+        tree.remove(code);
+
+        case 4:
+        cout << "Enter code to search" << endl;
+        cin >> code;
+        if (tree.searchNode(code)){
+            cout << "Found!\n";
+        }
+        else {
+            cout << "Not found" << endl;
+        }
+
+        case 5:
+        cout << "Enter a code to delete" << endl;
+        cin >> code;
+        tree.remove(code);
+
+        cout << "Enter a new code" << endl;
+        cin >> newCode;
+        tree.insertNode(newCode);
+        cout << "Modifie"
     }
 return 0;
 }
