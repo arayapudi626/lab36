@@ -19,5 +19,9 @@ void populate(IntBinaryTree &tree){
 int main() {
     IntBinaryTree tree;
     populate(tree);
+    string code;
+    int choice;
+
+    tree.displayInOrder();
 return 0;
 }
